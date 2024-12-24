@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:SfDataGridSample"
+             x:Class="SfDataGridSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:EmployeeViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="50,*,50,*,50,*"
+          ColumnDefinitions="*">
+
+        <Label Text="First Grid"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               Grid.Row="0"
+               Grid.Column="0" />
+
+        <!-- First DataGrid -->
+        <syncfusion:SfDataGrid Grid.Row="1" Margin="10"
+                               Grid.Column="0"
+                               ColumnWidthMode="Auto"
+                               GridLinesVisibility="Both"
+                               HeaderGridLinesVisibility="Both"
+                               ItemsSource="{Binding Employees}" />
+
+        <Label Text="Second Grid"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               Grid.Row="2"
+               Grid.Column="0" />
+
+        <!-- Second DataGrid -->
+        <syncfusion:SfDataGrid Grid.Row="3" Margin="10"
+                               Grid.Column="0"
+                               ColumnWidthMode="Auto"
+                               GridLinesVisibility="Both"
+                               HeaderGridLinesVisibility="Both"
+                               ItemsSource="{Binding Employees}" />
+
+        <Label Text="Third Grid"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               Grid.Row="4"
+               Grid.Column="0" />
+
+        <!-- Third DataGrid -->
+        <syncfusion:SfDataGrid Grid.Row="5" Margin="10"
+                               Grid.Column="0"
+                               ColumnWidthMode="Auto"
+                               GridLinesVisibility="Both"
+                               HeaderGridLinesVisibility="Both"
+                               ItemsSource="{Binding Employees}" />
+    </Grid>
+</ContentPage>
